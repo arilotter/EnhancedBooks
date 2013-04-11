@@ -35,12 +35,13 @@ public class BooksCore {
     //Tells Forge the location of your proxies
     public static CommonProxy proxy;
 
-    // Features: Bookshelves (3D!)
+    // Features:
+    // Bookshelves (3D!)
     // XP books
     // Hollow Books
+    // Bookshelves give enchantment table stats!
 
 
-    // TODO: Let bookshelves give enchantment table stats (NEEDS API FROM FORGE)
 
     // TODO: Bookshelves with any woodtype, look at dye recipe for getting itemblock IDS. -- FAR FUTURE
 
