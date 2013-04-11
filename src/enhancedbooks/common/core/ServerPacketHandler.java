@@ -72,12 +72,7 @@ public class ServerPacketHandler implements IPacketHandler {
             if (player.experienceLevel >= 1 && item.getItemDamage() >= 1) {
                 Utils.log("ServerPacketHandler: Added one level to book");
                 item.damageItem(-1, player);
-                if (player.experience < 5) {
-                    player.addExperienceLevel(-1);
-                    player.experience += player.xpBarCap(); //WRONG HOW THE FUCK DO I GET XP NEEDED TO LEVEL WAT
-                }
-                player.experience -= 5;
-                //player.experienceLevel -= 1;
+                player.experienceLevel -= 1;
             }
         }
 
