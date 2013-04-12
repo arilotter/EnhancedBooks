@@ -42,24 +42,13 @@ public class BooksCore {
     // Bookshelves give enchantment table stats!
 
 
-
-    // TODO: Bookshelves with any woodtype, look at dye recipe for getting itemblock IDS. -- FAR FUTURE
-
-    // TODO: Atlases
-    // TODO: Paper mill - logs, seeds, wheat, string, makes paper.
-    // TODO: Printing Press - dupes written books with paper, leather, ink
-    // TODO: Flying books n shit -- HALF DONE, ADDED THE MOB!!  NOW SPAWNING AND AI AND SHIT GO
-    // TODO: A placeable entity item, library ladder, a 3/4 block high entity which can be shoved side to side in a
-    // line from the direction it is placed in, can be climbed.
-    // (could possibly be done with modified minecarts and rails)
-
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
         Utils.loadConfig(event);
     }
 
     @Init
-    public void InitBooks(FMLInitializationEvent event) { // Main init method
+    public void initBooks(FMLInitializationEvent event) { // Main init method
         proxy.registerRenderInformation();
         proxy.registerEntities();
         proxy.registerItems();
