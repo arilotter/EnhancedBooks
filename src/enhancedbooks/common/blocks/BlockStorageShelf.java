@@ -12,6 +12,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import enhancedbooks.client.renderers.StorageShelfRenderer;
 import enhancedbooks.common.core.BooksCore;
 import enhancedbooks.common.tileentities.TileEntityStorageShelf;
+import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -36,7 +37,7 @@ public class BlockStorageShelf extends BlockContainer {
         this.setUnlocalizedName("StorageShelf"); // The name of the block
         this.setHardness(1.5F); // How hard the block is to break
         this.setResistance(2.0F); // How well the block resists explosions
-        this.setStepSound(super.soundWoodFootstep); // The sound the block makes when you walk on it as well as place or break
+        this.setStepSound(Block.soundWoodFootstep); // The sound the block makes when you walk on it as well as place or break
         this.setCreativeTab(CreativeTabs.tabDecorations);
     }
 
@@ -53,6 +54,7 @@ public class BlockStorageShelf extends BlockContainer {
             power += filledSlots[i] ? 1: 0;
         }
         return power / 3; //Divide by 3, because it's 3 books in one vanilla shelf for 1 vanilla shelf of power.
+        //THIS SHOULD BE 3F BUT LEX FUCKED UP THE PULL D:
     }
 
     @Override
