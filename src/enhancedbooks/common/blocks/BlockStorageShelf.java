@@ -47,14 +47,13 @@ public class BlockStorageShelf extends BlockContainer {
     }
 
     @Override
-    public int getEnchantPower(World world, int x, int y, int z) {
+    public float getEnchantPowerBonus(World world, int x, int y, int z) {
         int power = 0;
         boolean[] filledSlots = ((TileEntityStorageShelf)world.getBlockTileEntity(x, y, z)).getFilledSlots();
         for(int i = 0; i < 8; i++) {
             power += filledSlots[i] ? 1: 0;
         }
-        return power / 3; //Divide by 3, because it's 3 books in one vanilla shelf for 1 vanilla shelf of power.
-        //THIS SHOULD BE 3F BUT LEX FUCKED UP THE PULL D:
+        return power / 3F; //Divide by 3, because it's 3 books in one vanilla shelf for 1 vanilla shelf of power.
     }
 
     @Override
