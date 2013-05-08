@@ -13,7 +13,6 @@ import cpw.mods.fml.common.network.Player;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import enhancedbooks.common.core.Utils;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.Packet250CustomPayload;
 
@@ -41,22 +40,17 @@ public class ClientPacketHandler implements IPacketHandler {
             this.packetType = stream.readInt();
         } catch (Exception ex) {
             ex.printStackTrace();
-        }        /*
+        }
+        /*
          * each packet type needs to implement an if and then whatever other
 		 * read functions it needs complete with try/catch blocks
 		 */
         if (this.packetType == 0) { // GuiExpBook button pressed
-            // Sync values mebbe idk lol?
-            handleExpBookGuiButtonPressed(this.packetType, (EntityPlayer) player);
+            // Nothing happens here I think ahh
         }
         Utils.log("ClientPacketHandler: Press 1 complete!");
         if (this.packetType == 1) {
             // Unimplemented, yay! :D
         }
-    }
-
-    private void handleExpBookGuiButtonPressed(int buttonPressed,
-                                               EntityPlayer player) {
-        player.experienceLevel--;
     }
 }

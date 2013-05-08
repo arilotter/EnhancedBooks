@@ -12,13 +12,6 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Ari
- * Date: 1/7/13
- * Time: 10:35 AM
- * To change this template use File | Settings | File Templates.
- */
 public class ItemXPBook extends ItemBook {
     public ItemXPBook(int i) {
         super(i);

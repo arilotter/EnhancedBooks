@@ -59,14 +59,13 @@ public class ServerPacketHandler implements IPacketHandler {
 
         }
         if (this.packetType == 1) {
-            // Atlas update NBT!
+            // Atlas update NBT! :D
         }
     }
 
     private void handleExpBookGuiButtonPressed(int buttonPressed, EntityPlayer player) {
-        if (player.isDead) return;
+        if (player.isDead || player.capabilities.isCreativeMode) return;
         ItemStack item = player.inventory.getCurrentItem();
-        if (player.capabilities.isCreativeMode) return;
         if (buttonPressed == 1) {
             // Add one level to book
             if (player.experienceLevel >= 1 && item.getItemDamage() >= 1) {
